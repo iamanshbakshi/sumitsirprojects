@@ -1,0 +1,96 @@
+
+//////////////////////////////////30 october 2023 ////////////////////////
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // Object inside an array
+let array1 = ["rahul", 20, { "hobbies": ["reading", "singing"] }];
+console.log(array1[2]["hobbies"][1]);
+console.log("<br/>");
+
+// Array inside an object
+let object1 = {
+  "hobbies": {
+    "hobby1": "reading",
+    "hobby2": "dancing"
+  }
+};
+console.log(object1["hobbies"]["hobby2"]);
+console.log("<br/>");
+
+// Use of the map function
+let array2 = [10, 20, 30, 40, 50];
+
+function callELM(elm1, elm2) { // elm1==value, elm2==index
+  console.log(elm1, elm2);
+}
+
+array2.map(callELM);
+console.log("<br/>");
+
+// Anonymous function creation
+let newresultarray = array2.map((val, index) => {
+  console.log("inside called in map");
+  console.log(val, index);
+
+  if (val > 30) {
+    return val;
+  }
+});
+console.log("newresultarray is ", newresultarray);
+console.log("<br/>");
+
+// Object cloning
+
+// 1) Object.assign method
+let obj1 = {
+  "name": "rahul",
+  "age": 20,
+  "hobbies": {
+    "hobby1": "singing",
+    "hobby2": "dancing"
+  }
+};
+
+let obj3 = Object.assign({ "city": "nagpur", "state": "MH" }, obj1);
+
+obj3["name"] = "john";
+obj3["age"] = 22;
+obj3["hobbies"]["hobby2"] = "playing";
+
+console.log("obj1 is ", obj1);
+console.log("obj2 is ", obj3);
+console.log("<br/>");
+
+// 2) Spread operator
+let obj2 = { ...obj1 };
+
+obj2["name"] = "john";
+obj2["hobbies"]["hobby1"] = "reading";
+
+console.log("obj1", obj1);
+console.log("obj2", obj2);
+console.log("<br/>");
+
+// 3) Using JSON methods (Deep copy)
+let obj6 = JSON.parse(JSON.stringify(obj1));
+obj2["name"] = "john";
+obj2["hobbies"]["hobby1"] = "reading";
+
+console.log("obj1", obj1);
+console.log("obj6", obj6);
+
+
+
+
+
+  </script>
+  
+</body>
+</html>

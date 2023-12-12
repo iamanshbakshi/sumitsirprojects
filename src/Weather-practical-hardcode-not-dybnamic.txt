@@ -1,0 +1,207 @@
+********************************  App.js
+
+
+
+import React from 'react';
+import logo from './logo.svg';
+import './App.css';
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import Hello from './Hello';
+import About from './About';
+import NavLink from './NavLink';
+import Home from './Home';
+import Register from './Register';
+import Login from './Login';
+import Contact from './Contact';
+import NotFound from './NotFound';
+import UserDetail from './UserDetail';
+import Weather from './Weather';
+
+
+
+function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+
+        <Route path="/" element={<NavLink />}>
+         <Route path="about" element={<About />} />
+          <Route path="hello" element={<Hello />} />
+          <Route path="*" element={<NotFound />} /> 
+          <Route path="home" element={<Home />} />
+          <Route path="login" element={<Login />} /> 
+          <Route path="register" element={<Register/>} /> 
+          <Route path="contact" element={<Contact />} /> 
+          <Route path="accessweather" element={<Weather />}/>
+        
+          <Route path="userinfo" element={<UserDetail />} />
+         
+
+          
+        </Route>
+
+
+        {/* <Route path="/admin" element={<Home />}>
+          <Route path="about" element={<About />} />
+          <Route path="hello" element={<Hello />} />
+          <Route path="*" element={<NotFound />} />
+          <Route path="user-info" element={<User_Detail}/>} />
+        </Route> */}
+      </Routes>
+  </BrowserRouter> 
+  );
+}
+
+export default App;
+
+
+
+******************************Navlink.js
+
+
+import { Link, Outlet } from "react-router-dom";
+import React from 'react';
+
+function NavLink(){
+    return <div>
+
+        <Link to="about">About</Link> <br/>
+        <Link to="hello">Hello</Link> <br/>
+        <Link to="home">Home</Link> <br/>
+        <Link to="register">Register</Link> <br/>
+        <Link to="login">Login</Link> <br/>
+        <Link to="contact">Contact</Link> <br/>
+        <Link to="notfound">NotFound</Link> <br/>
+        <Link to="userinfo">UserDetail</Link> <br/>
+        {/* <Link to="experiments">Array_Obj_exp</Link> */}
+        <Link to="accessweather">Weather-info</Link><br/>
+        
+        
+      
+
+
+
+
+
+        {/* <a href="about">About</a> <br />
+        <a href="hello">Hello</a>  */}
+
+        <Outlet />
+
+    </div>
+}
+
+export default NavLink;
+
+
+**************************************Weather.js
+
+
+
+
+import React from 'react';
+import Box from '@mui/material/Box';
+import Card from '@mui/material/Card';
+import CardActions from '@mui/material/CardActions';
+import CardContent from '@mui/material/CardContent';
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
+import { styled } from '@mui/material/styles';
+import Paper from '@mui/material/Paper';
+import Grid from '@mui/material/Grid';
+
+
+
+
+
+
+
+
+function Weather(){
+
+    return (
+        <Box sx={{ flexGrow: 1 }}>
+      <Grid container spacing={3}>
+        <Grid item xs={4}>
+        <Card sx={{ minWidth: 275 }}>
+      <CardContent>
+        <Typography sx={{ fontSize: 14 }} color="Green" gutterBottom>
+          Nagpur
+        </Typography>
+        
+        <Typography sx={{ mb: 1.5 }} color="Blue">
+          Temp
+        </Typography>
+        <Typography variant="body2">
+          well meaning and kindly.
+          <br />
+          {'"a benevolent smile"'}
+        </Typography>
+      </CardContent>
+      <CardActions>
+        <Button size="small">Learn More</Button>
+      </CardActions>
+    </Card>
+        </Grid>
+
+
+
+        <Grid item xs={4}>
+        <Card sx={{ minWidth: 275 }}>
+      <CardContent>
+        <Typography sx={{ fontSize: 14 }} color="Green" gutterBottom>
+          Mumbai
+        </Typography>
+        
+        <Typography sx={{ mb: 1.5 }} color="Blue">
+          Temp
+        </Typography>
+        <Typography variant="body2">
+          well meaning and kindly.
+          <br />
+          {'"a benevolent smile"'}
+        </Typography>
+      </CardContent>
+      <CardActions>
+        <Button size="small">Learn More</Button>
+      </CardActions>
+    </Card>
+        </Grid>
+        <Grid item xs={4}>
+        <Card sx={{ minWidth: 275 }}>
+      <CardContent>
+        <Typography sx={{ fontSize: 14 }} color="Green" gutterBottom>
+          Gondia
+        </Typography>
+       
+        <Typography sx={{ mb: 1.5 }} color="Blue">
+          Temp
+        </Typography>
+        <Typography variant="body2">
+          well meaning and kindly.
+          <br />
+          {'"a benevolent smile"'}
+        </Typography>
+      </CardContent>
+      <CardActions>
+        <Button size="small">Learn More</Button>
+      </CardActions>
+    </Card>
+        </Grid>
+       
+      </Grid>
+    </Box>
+
+      
+    )
+
+}
+
+
+export default Weather;
+
+
+
+
+
+

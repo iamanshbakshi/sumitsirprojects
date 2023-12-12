@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array and Object Creation</title>
+</head>
+<body>
+    <div>
+        <!-- JavaScript code for string concatenation -->
+        <script>
+            let name = "Ansh";
+            let age = 20;
+            let str = "My name and age is";
+            document.write("My name and age is " + name + " and " + age + "<br>");
+            document.write(`My name and age is ${name} and ${age}` + "<br>");
+        </script>
+
+        <h5>$ way of writing string</h5>
+
+        <!-- JavaScript code for array creation -->
+        <script>
+            let student = ["rahul", 25, ["dance", "play"], 'm'];
+            document.write("student-name: " + student[0] + "<br>");
+            document.write("student-age: " + student[1] + "<br>");
+            document.write("student hobbies: " + student[2][0] + " " + student[2][1] + "<br>");
+            document.write("student fvt letter: " + student[3] + "<br>");
+
+            for (let i = 0; i < student.length; i++) {
+                document.write(student[i] + "<br>");
+            }
+        </script>
+
+        <!-- JavaScript code for object creation -->
+        <script>
+            let teacher = {"identity": "Ramansh", "age": 25, "hobbies": ["dance", "play"]};
+            document.write("Teacher identity: " + teacher.identity + "<br>");
+            document.write("Teacher age: " + teacher.age + "<br>");
+            document.write("Teacher hobbies: " + teacher.hobbies + "<br>");
+            document.write("Teacher identity (bracket notation): " + teacher["identity"] + "<br>");
+            document.write("Teacher age (bracket notation): " + teacher["age"] + "<br>");
+        </script>
+    </div>
+</body>
+</html>

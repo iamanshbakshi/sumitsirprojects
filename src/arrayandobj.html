@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array and Object Creation</title>
+</head>
+<body>
+    <div>
+        <!-- JavaScript code for string concatenation -->
+        <script>
+            let name = "Ansh";
+            let age = 20;
+            let str = "My name and age is";
+            console.log("My name and age is " + name + " and " + age);
+            console.log(`My name and age is ${name} and ${age}`);
+        </script>
+
+        <h5>$ way of writing string</h5>
+
+        <!-- JavaScript code for array creation -->
+        <script>
+            let student = ["rahul", 25, ["dance", "play"], 'm'];
+            console.log("student-name", student[0]);
+            console.log("student-age", student[1]);
+            console.log("student hobbies", student[2][0], student[2][1]);
+            console.log("student fvt letter", student[3]);
+
+            for (let i = 0; i < student.length; i++) {
+                console.log(student[i]);
+            }
+        </script>
+
+        <!-- JavaScript code for object creation -->
+        <script>
+            let teacher = {"identity": "Ramansh", "age": 25, "hobbies": ["dance", "play"]};
+            console.log(teacher.identity);
+            console.log(teacher.age);
+            console.log(teacher.hobbies);
+            console.log(teacher["identity"]);
+            console.log(teacher["age"]);
+        </script>
+    </div>
+</body>
+</html>
