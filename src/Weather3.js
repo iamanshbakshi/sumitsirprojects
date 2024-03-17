@@ -19,7 +19,7 @@ import axios from "axios";
 function Weather3(){
 
    // hardcoded--->const [cities, setCities] = React.useState([{"city":"Nagpur", "temp": 20, "wind": "24kmph"}, {"city":"Mumbai", "temp": 24}, {"city":"Pune", "temp": 30}, {"city":"Delhi"}, {"city":"Wardha"}, {"city":"Gondia"}]);
-    const[cities,setCities]=React.useState(["Nagpur","Gondia","Mumbai","Pune"])
+    const[cities,setCities]=React.useState(["Nagpur","Gondia","Mumbai","Pune","Ballarpur","Jabalpur"])
 
     const [apidata, setApiData] = React.useState([]);  //  here api data is blank array 
 
